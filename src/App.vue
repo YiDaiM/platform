@@ -1,9 +1,11 @@
+<script setup lang="ts">
+import wfButton from './components/Button/Button.vue'
+</script>
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="main">
+    <wfButton type="warning">默认按钮</wfButton>
+  </div>
 </template>
 
 <style lang="scss">
@@ -14,17 +16,8 @@
   text-align: center;
   color: #2c3e50;
 }
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+#main {
+  width: 100%;
+  margin: 200px auto;
 }
 </style>

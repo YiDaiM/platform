@@ -1,0 +1,58 @@
+.wf-button {
+  --back-ground-color: var(--primary-color);
+  --button-border-color: var(--primary-color);
+  --text-color: var(--white-color);
+}
+
+
+
+.wf-button {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: var(--back-ground-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--text-color);
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: .1s;
+  font-weight: 500;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  user-select: none;
+}
+
+@each $val in primary,success,warning,info,danger {
+  .button--$val {
+    --back-ground-color: var(--$val-color);
+    --button-border-color: var(--$val-color);
+  }
+}
+.button--primary {
+  --back-ground-color: var(--primary-color);
+  --button-border-color: var(--border-color);
+}
+
+.button--info {
+  --back-ground-color: var(--info-color);
+  --button-border-color: var(--info-color);
+}
+
+.button--danger {
+  --back-ground-color: var(--danger-color);
+  --button-border-color: var(--danger-color);
+}
+
+.button--success {
+  --back-ground-color: var(--success-color);
+  --button-border-color: var(--success-color);
+}
+
+.button--warning {
+  --back-ground-color: var(--warning-color);
+  --button-border-color: var(--warning-color);
+}
