@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import wfButton from './components/Button/Button.vue'
 </script>
 
 <template>

@@ -26,10 +26,10 @@
   user-select: none;
 }
 
-@each $val in primary,success,warning,info,danger {
+@each $val in primary, success, warning, info, danger {
   .button--$val {
-    --back-ground-color: var(--$val-color);
-    --button-border-color: var(--$val-color);
+    --back-ground-color: var(--#{$val}-color);
+    --button-border-color: var(--#{$val}-color);
   }
 }
 .button--primary {

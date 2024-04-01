@@ -3,6 +3,12 @@ module.exports = {
   env: {
     node: true
   },
+  "overrides": [
+    {
+      "files": ["*.scss"],
+      "processor": "ignore"
+    }
+  ],
   globals: {
     defineProps: 'readonly',
     defineEmits: 'readonly'
