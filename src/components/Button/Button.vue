@@ -1,7 +1,10 @@
 <template>
   <button
+    ref="_ref"
     class="wf-button"
     v-bind="$attrs"
+    :type="nativeType"
+    :autofocus="autofocus"
     :class="{
       [`button--${type}`]: type,
       [`button--${size}`]: size,
@@ -18,10 +21,17 @@ export default defineComponent({
 })
 </script>
 <script lang="ts" setup>
-import { defineProps } from 'vue'
-import type { ButtonProps } from './types'
+import { defineProps, withDefaults, defineExpose, ref } from 'vue'
+import type { ButtonProps, ButtonInstance } from './types'
 
-defineProps<ButtonProps>()
+// withDefault 可以设置默认值
+withDefaults(defineProps<ButtonProps>(), {nativeType: 'button'})
+
+const _ref = ref<ButtonInstance>()
+
+defineExpose({
+  ref: _ref
+})
 
 </script>
 <style lang="scss" scoped>
