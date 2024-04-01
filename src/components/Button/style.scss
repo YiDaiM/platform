@@ -2,6 +2,8 @@
   --back-ground-color: var(--primary-color);
   --button-border-color: var(--primary-color);
   --text-color: var(--white-color);
+  --text-size: var(--medium-text-size)
+  --button-radius: var(--radius-base)
 }
 
 
@@ -21,8 +23,8 @@
   transition: .1s;
   font-weight: 500;
   padding: 12px 20px;
-  font-size: 14px;
-  border-radius: 4px;
+  font-size: var(--text-size);
+  border-radius: var(--button-radius);
   user-select: none;
 }
 
@@ -55,4 +57,20 @@
 .button--warning {
   --back-ground-color: var(--warning-color);
   --button-border-color: var(--warning-color);
+}
+
+.button--large {
+  --text-size: var(--large-text-size)
+}
+
+.button--medium {
+  --text-size: var(--medium-text-size)
+}
+
+.button--small {
+  --text-size: var(--small-text-size)
+}
+
+.is-round {
+  --button-radius: var(--radius-20)
 }

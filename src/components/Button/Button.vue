@@ -1,9 +1,11 @@
 <template>
   <button
     class="wf-button"
+    v-bind="$attrs"
     :class="{
       [`button--${type}`]: type,
-      
+      [`button--${size}`]: size,
+      'is-round': round
     }"
   >
     <slot></slot>

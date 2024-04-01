@@ -1,12 +1,15 @@
 <script setup lang="ts">
+const toLog = () => {
+  console.log('hello world');
+  
+}
 </script>
 
 <template>
   <div id="main">
-    <wfButton type="warning">默认按钮</wfButton>
+    <wfButton type="warning" size="large" round disabled @click="toLog">默认按钮</wfButton>
   </div>
 </template>
-
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
