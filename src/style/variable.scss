@@ -1,4 +1,124 @@
 :root {
+  // color
+  color-scheme: light;
+  --wf-color-primary: #409eff;
+  --wf-color-primary-light-3: #79bbff;
+  --wf-color-primary-light-5: #a0cfff;
+  --wf-color-primary-light-7: #c6e2ff;
+  --wf-color-primary-light-8: #d9ecff;
+  --wf-color-primary-light-9: #ecf5ff;
+  --wf-color-primary-dark-2: #337ecc;
+  --wf-color-success: #67c23a;
+  --wf-color-success-light-3: #95d475;
+  --wf-color-success-light-5: #b3e19d;
+  --wf-color-success-light-7: #d1edc4;
+  --wf-color-success-light-8: #e1f3d8;
+  --wf-color-success-light-9: #f0f9eb;
+  --wf-color-success-dark-2: #529b2e;
+  --wf-color-warning: #e6a23c;
+  --wf-color-warning-light-3: #eebe77;
+  --wf-color-warning-light-5: #f3d19e;
+  --wf-color-warning-light-7: #f8e3c5;
+  --wf-color-warning-light-8: #faecd8;
+  --wf-color-warning-light-9: #fdf6ec;
+  --wf-color-warning-dark-2: #b88230;
+  --wf-color-danger: #f56c6c;
+  --wf-color-danger-light-3: #f89898;
+  --wf-color-danger-light-5: #fab6b6;
+  --wf-color-danger-light-7: #fcd3d3;
+  --wf-color-danger-light-8: #fde2e2;
+  --wf-color-danger-light-9: #fef0f0;
+  --wf-color-danger-dark-2: #c45656;
+  --wf-color-error: #f56c6c;
+  --wf-color-error-light-3: #f89898;
+  --wf-color-error-light-5: #fab6b6;
+  --wf-color-error-light-7: #fcd3d3;
+  --wf-color-error-light-8: #fde2e2;
+  --wf-color-error-light-9: #fef0f0;
+  --wf-color-error-dark-2: #c45656;
+  --wf-color-info: #909399;
+  --wf-color-info-light-3: #b1b3b8;
+  --wf-color-info-light-5: #c8c9cc;
+  --wf-color-info-light-7: #dedfe0;
+  --wf-color-info-light-8: #e9e9eb;
+  --wf-color-info-light-9: #f4f4f5;
+  --wf-color-info-dark-2: #73767a;
+
+  // background
+  --wf-bg-color: #ffffff;
+  --wf-bg-color-page: #f2f3f5;
+  --wf-bg-color-overlay: #ffffff;
+
+
+  // text
+  --wf-text-color-primary: #303133;
+  --wf-text-color-regular: #606266;
+  --wf-text-color-secondary: #909399;
+  --wf-text-color-placeholder: #a8abb2;
+  --wf-text-color-disabled: #c0c4cc;
+
+  // border
+  --wf-border-color: #dcdfe6;
+  --wf-border-color-light: #e4e7ed;
+  --wf-border-color-lighter: #ebeef5;
+  --wf-border-color-extra-light: #f2f6fc;
+  --wf-border-color-dark: #d4d7de;
+  --wf-border-color-darker: #cdd0d6;
+
+
+  // fill
+  --wf-fill-color: #f0f2f5;
+  --wf-fill-color-light: #f5f7fa;
+  --wf-fill-color-lighter: #fafafa;
+  --wf-fill-color-extra-light: #fafcff;
+  --wf-fill-color-dark: #ebedf0;
+  --wf-fill-color-darker: #e6e8eb;
+  --wf-fill-color-blank: #ffffff;
+
+
+  // shadow
+  --wf-box-shadow: 0px 12px 32px 4px rgba(0, 0, 0, .04), 0px 8px 20px rgba(0, 0, 0, .08);
+  --wf-box-shadow-light: 0px 0px 12px rgba(0, 0, 0, .12);
+  --wf-box-shadow-lighter: 0px 0px 6px rgba(0, 0, 0, .12);
+  --wf-box-shadow-dark: 0px 16px 48px 16px rgba(0, 0, 0, .08), 0px 12px 32px rgba(0, 0, 0, .12), 0px 8px 16px -8px rgba(0, 0, 0, .16);
+
+
+  // disabled
+  --wf-disabled-bg-color: var(--wf-fill-color-light);
+  --wf-disabled-text-color: var(--wf-text-color-placeholder);
+  --wf-disabled-border-color: var(--wf-border-color-light);
+  --wf-overlay-color: rgba(0, 0, 0, .8);
+  --wf-overlay-color-light: rgba(0, 0, 0, .7);
+  --wf-overlay-color-lighter: rgba(0, 0, 0, .5);
+  --wf-mask-color: rgba(255, 255, 255, .9);
+  --wf-mask-color-extra-light: rgba(255, 255, 255, .3);
+
+
+  // border
+  --wf-border-width: 1px;
+  --wf-border-style: solid;
+  --wf-border-color-hover: var(--wf-text-color-disabled);
+  --wf-border: var(--wf-border-width) var(--wf-border-style) var(--wf-border-color);
+
+
+  // font
+  --wf-font-size-extra-large: 20px;
+  --wf-font-size-large: 18px;
+  --wf-font-size-medium: 16px;
+  --wf-font-size-base: 14px;
+  --wf-font-size-small: 13px;
+  --wf-font-size-extra-small: 12px;
+  --wf-font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "\5fae\8f6f\96c5\9ed1", Arial, sans-serif;
+  --wf-font-weight-primary: 500;
+
+
+  // radius
+  --wf-border-radius-base: 4px;
+  --wf-border-radius-small: 2px;
+  --wf-border-radius-round: 20px;
+  --wf-border-radius-circle: 100%;
+
+
   --primary-color: #409eff;
   --success-color: #67c23a;
   --info-color: #909399;
