@@ -1,10 +1,12 @@
 import { App } from 'vue'
 
 import Button from './Button/Button.vue'
+import Collapse from './Collapse/Collapse.vue'
 
 import prefix from './prefix'
 const component = [
-  Button
+  Button,
+  Collapse
 ]
 
 // 批量注册全局组件
