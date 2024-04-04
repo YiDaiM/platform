@@ -3,7 +3,7 @@ import test from './views/test.vue'
 </script>
 
 <template>
-  <div id="main">
+  <div>
     <test></test>
   </div>
 </template>
@@ -13,9 +13,5 @@ import test from './views/test.vue'
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-}
-#main {
-  width: 100%;
-  margin: 200px auto;
 }
 </style>

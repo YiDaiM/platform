@@ -1,0 +1,32 @@
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s ease; /* 过渡透明度 */
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0; /* 设置开始和结束时的透明度 */
+}
+
+
+.slide-enter-active, .slide-leave-active {
+  transition: height 0.5s ease;
+}
+.slide-enter, .slide-leave-to /* .slide-leave-active below version 2.1.8 */ {
+  height: 0;
+  overflow: hidden;
+}
+
+
+.scale-enter-active, .scale-leave-active {
+  transition: transform 0.5s;
+}
+.scale-enter, .scale-leave-to /* .scale-leave-active below version 2.1.8 */ {
+  transform: scale(0);
+}
+
+
+.rotate-enter-active, .rotate-leave-active {
+  transition: transform 0.5s;
+}
+.rotate-enter, .rotate-leave-to /* .rotate-leave-active below version 2.1.8 */ {
+  transform: rotate(180deg);
+}

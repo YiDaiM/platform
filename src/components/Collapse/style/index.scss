@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  user-select: none;
 }
 .collapse-main-wrapper {
   --cursor: pointer;
@@ -36,4 +37,14 @@
 }
 .disabledClass {
   --cursor: var(--wf-disabled-cursor)
+}
+
+.collapse-transition-enter-active,
+.collapse-transition-leave-active {
+  transition: height 0.3s ease; /* 过渡高度 */
+}
+.collapse-transition-enter,
+.collapse-transition-leave-to /* .collapse-transition-leave-active below version 2.1.8 */ {
+  height: 0; /* 设置开始和结束时的高度 */
+  overflow: hidden; /* 隐藏超出部分 */
 }

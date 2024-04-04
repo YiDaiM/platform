@@ -2,11 +2,16 @@
   <div class="collapse-main-wrapper">
     <hr />
     <Collapse-item
-      v-for="(item, index) in list"
-      :key="index"
-      :item="item"
-      @change="collapseChange"
-    ></Collapse-item>
+        v-for="(item, index) in list"
+        :key="index"
+        :item="item"
+        @change="collapseChange($event, index)"
+        ref="collapseRef"
+      >
+      <template v-slot:title="row">
+        <slot name="title">{{ row }}</slot>
+      </template>
+    </Collapse-item>
   </div>
 </template>
 <script lang="ts">
@@ -16,19 +21,33 @@ export default defineComponent({
 })
 </script>
 <script setup lang="ts">
-import { defineProps, defineEmits, defineExpose } from 'vue'
+import { defineProps, defineEmits, defineExpose, ref, withDefaults } from 'vue'
 import { collapseType } from './types'
 import CollapseItem from './Collapse-item.vue';
 
-defineProps<collapseType>()
+const props = withDefaults(defineProps<collapseType>(), {accordion: false, list: []})
+
+let preIndex = ref<null | number>(null) // 上次展开项的索引
+const collapseRef = ref([]) // 所有的 ref节点
+
 const changeEmit = defineEmits(['change'])
-const collapseChange = (item:any) => {
-  
+const collapseChange = (item:any, index: number) => {
+  const { accordion } = props
+  accordion && closePreTag(index)
   changeEmit('change', item)
 }
+
+const closePreTag = (curIndex: number) => {
+  if (preIndex.value && preIndex.value !== curIndex) {
+    collapseRef.value[preIndex.value].expand = false
+  }
+  preIndex.value = curIndex
+}
+
 defineExpose({
-  collapseChange
+  collapseChange,
 })
+
 </script>
 <style scoped lang="scss">
 @import url('./style/index.scss');

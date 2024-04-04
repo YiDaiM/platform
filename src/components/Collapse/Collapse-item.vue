@@ -1,5 +1,6 @@
 <template>
-  <div class="collapse-item-wrapper" :class="{'disabledClass': item.disabled}">
+  <transition name="collapse-transition">
+    <div class="collapse-item-wrapper" :class="{'disabledClass': item.disabled}">
     <div class="collapse-item-title" @click="change">
       <span><slot name="title">{{ item.title }}</slot></span>
       <i :class="toggleIcon"></i>
@@ -8,6 +9,8 @@
       {{ item.content }}
     </div>
   </div>
+  </transition>
+  
 </template>
 <script lang="ts">
   export default {
