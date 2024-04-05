@@ -5,9 +5,21 @@
       <span><slot name="title" :title="item.title">{{ item.title }}</slot></span>
       <i :class="toggleIcon"></i>
     </div>
-    <div class="collapse-item-content" v-if="expand">
-      <slot name="content" :content="item.content">{{ item.content }}</slot>
-    </div>
+    <transition
+    name="collapse-slide"
+      @before-enter="onBeforeEnter"
+      @enter="onEnter"
+      @after-enter="onAfterEnter"
+      @before-leave="onBeforeLeave"
+      @leave="onLeave"
+      @after-leave="onAfterLeave"
+    >
+      <div class="transition-box" v-if="expand">
+        <div class="collapse-item-content">
+          <slot name="content" :content="item.content">{{ item.content }}</slot>
+        </div>
+      </div>
+    </transition>
   </div>
   </transition>
   
@@ -39,6 +51,34 @@
         if (this.item.disabled) return
         this.expand = !this.expand
         this._emit()
+      },
+      onBeforeEnter(el: Element): void | undefined {
+        const htmlEl = el as HTMLElement
+        htmlEl.style.height = '0'
+        htmlEl.style.overflow = 'hidden'
+      },
+      onEnter(el: Element) {
+        const htmlEl = el as HTMLElement
+        htmlEl.style.height = `${el.scrollHeight}px`
+      },
+      onAfterEnter(el: Element): void {
+        const htmlEl = el as HTMLElement
+        htmlEl.style.height = ''
+        htmlEl.style.overflow = ''
+      },
+      onBeforeLeave(el: Element) {
+        const htmlEl = el as HTMLElement
+        htmlEl.style.height = `${el.scrollHeight}px`
+        htmlEl.style.overflow = 'hidden'
+      },
+      onLeave(el: Element) {
+        const htmlEl = el as HTMLElement
+        htmlEl.style.height = '0'
+      },
+      onAfterLeave(el: Element) {
+        const htmlEl = el as HTMLElement
+        htmlEl.style.height = ''
+        htmlEl.style.overflow = ''
       }
     }
   }

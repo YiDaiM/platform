@@ -41,7 +41,7 @@ const collapseChange = (item:any, index: number) => {
 }
 
 const closePreTag = (curIndex: number) => {
-  if (preIndex.value && preIndex.value !== curIndex) {
+  if (preIndex.value !== null && preIndex.value != curIndex) {
     collapseRef.value[preIndex.value].expand = false
   }
   preIndex.value = curIndex
