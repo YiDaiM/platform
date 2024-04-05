@@ -2,11 +2,11 @@
   <transition name="collapse-transition">
     <div class="collapse-item-wrapper" :class="{'disabledClass': item.disabled}">
     <div class="collapse-item-title" @click="change">
-      <span><slot name="title">{{ item.title }}</slot></span>
+      <span><slot name="title" :title="item.title">{{ item.title }}</slot></span>
       <i :class="toggleIcon"></i>
     </div>
     <div class="collapse-item-content" v-if="expand">
-      {{ item.content }}
+      <slot name="content" :content="item.content">{{ item.content }}</slot>
     </div>
   </div>
   </transition>

@@ -8,8 +8,11 @@
         @change="collapseChange($event, index)"
         ref="collapseRef"
       >
-      <template v-slot:title="row">
-        <slot name="title">{{ row }}</slot>
+      <template v-slot:title="{ title }">
+        <slot name="title" :title="title"></slot>
+      </template>
+      <template #content="{ content }">
+        <slot name="content" :content="content"></slot>
       </template>
     </Collapse-item>
   </div>
