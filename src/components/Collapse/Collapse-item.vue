@@ -6,7 +6,7 @@
       <i :class="toggleIcon"></i>
     </div>
     <transition
-    name="collapse-slide"
+      name="collapse-slide"
       @before-enter="onBeforeEnter"
       @enter="onEnter"
       @after-enter="onAfterEnter"
@@ -26,6 +26,7 @@
 </template>
 <script lang="ts">
   export default {
+    name: 'CollapseItem',
     props: {
       item: {
         type: Object as () => any,

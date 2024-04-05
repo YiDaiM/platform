@@ -1,7 +1,7 @@
 <template>
   <div class="collapse-main-wrapper">
     <hr />
-    <Collapse-item
+    <wf-collapse-item
         v-for="(item, index) in list"
         :key="index"
         :item="item"
@@ -14,7 +14,7 @@
       <template #content="{ content }">
         <slot name="content" :content="content"></slot>
       </template>
-    </Collapse-item>
+    </wf-collapse-item>
   </div>
 </template>
 <script lang="ts">
@@ -26,7 +26,6 @@ export default defineComponent({
 <script setup lang="ts">
 import { defineProps, defineEmits, defineExpose, ref, withDefaults } from 'vue'
 import { collapseType } from './types'
-import CollapseItem from './Collapse-item.vue';
 
 const props = withDefaults(defineProps<collapseType>(), {accordion: false, list: []})
 
