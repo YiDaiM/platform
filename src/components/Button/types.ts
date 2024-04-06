@@ -1,10 +1,9 @@
-export type ButtonType = 'primary' | 'success' | 'warning' | 'danger' | 'info'
-export type ButtonSize = 'large' | 'medium' | 'small'
+import { colorType, size } from '@/components/commontType'
 export type nativeType = 'button' | 'reset' | 'submit'
 
 export interface ButtonProps {
-  type?: ButtonType,
-  size?: ButtonSize,
+  type?: colorType,
+  size?: size,
   plain?: boolean,
   round?: boolean,
   circle?: boolean,
