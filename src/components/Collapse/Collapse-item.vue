@@ -25,7 +25,8 @@
   
 </template>
 <script lang="ts">
-  export default {
+import { defineComponent } from 'vue'
+  export default defineComponent({
     name: 'CollapseItem',
     props: {
       item: {
@@ -39,7 +40,7 @@
       }
     },
     computed: {
-      toggleIcon() {
+      toggleIcon(): string {
         return this.expand ? 'icon-arrow-down' : 'icon-arrow-right'
       }
     },
@@ -48,7 +49,7 @@
       _emit() {
         this.$emit('change', this.item)
       },
-      change() {
+      change(): string | void {
         if (this.item.disabled) return
         this.expand = !this.expand
         this._emit()
@@ -82,7 +83,7 @@
         htmlEl.style.overflow = ''
       }
     }
-  }
+  })
 </script>
 <style lang="scss" scoped>
 @import url('./style/index.scss');
