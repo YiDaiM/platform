@@ -1,13 +1,6 @@
 <template>
   <div style="width: 500px;margin: auto">
-    <wf-collapse :list="list" ref="collapseRef" accordion>
-      <template v-slot:title="{title}">
-        {{ title }}
-      </template>
-      <template v-slot:content="{content}">
-        {{ content }}
-      </template>
-    </wf-collapse>
+    <wf-icon type="danger"></wf-icon>
   </div>
 </template>
 

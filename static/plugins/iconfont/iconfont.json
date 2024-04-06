@@ -6,6 +6,41 @@
   "description": "platform for ui project",
   "glyphs": [
     {
+      "icon_id": "10678418",
+      "name": "info",
+      "font_class": "info",
+      "unicode": "e6de",
+      "unicode_decimal": 59102
+    },
+    {
+      "icon_id": "11686800",
+      "name": "warning",
+      "font_class": "warning",
+      "unicode": "e676",
+      "unicode_decimal": 58998
+    },
+    {
+      "icon_id": "15838611",
+      "name": "success",
+      "font_class": "success",
+      "unicode": "e68b",
+      "unicode_decimal": 59019
+    },
+    {
+      "icon_id": "19950076",
+      "name": "primary",
+      "font_class": "primary",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "39827851",
+      "name": "danger",
+      "font_class": "danger",
+      "unicode": "e754",
+      "unicode_decimal": 59220
+    },
+    {
       "icon_id": "15838429",
       "name": "arrow-down",
       "font_class": "arrow-down",

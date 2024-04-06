@@ -1,0 +1,50 @@
+.icon-body {
+  --text-size: var(--wf-font-size-base);
+  --font-color: var(--wf-text-color-primary)
+}
+
+.icon_wrapper {
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+  line-height: 100%;
+  span {
+    padding-left: 5px;
+  }
+}
+.icon-body {
+  font-size: var(--text-size);
+  color: var(--font-color)
+}
+
+.icon--primary {
+  --font-color: var(--primary-color);
+}
+
+.icon--info {
+  --font-color: var(--info-color);
+}
+
+.icon--danger {
+  --font-color: var(--danger-color);
+}
+
+.icon--success {
+  --font-color: var(--success-color);
+}
+
+.icon--warning {
+  --font-color: var(--warning-color);
+}
+
+.icon--large {
+  --text-size: var(--large-text-size)
+}
+
+.icon--medium {
+  --text-size: var(--medium-text-size)
+}
+
+.icon--small {
+  --text-size: var(--small-text-size)
+}
