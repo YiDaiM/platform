@@ -4,13 +4,15 @@ import Button from './Button/Button.vue'
 import Collapse from './Collapse/Collapse.vue'
 import CollapseItem from './Collapse/Collapse-item.vue'
 import icon from './Icon/icon.vue'
+import Alert from './Alert/Alert.vue'
 
 import prefix from './prefix'
 const component = [
   Button,
   Collapse,
   CollapseItem,
-  icon
+  icon,
+  Alert
 ]
 
 // 批量注册全局组件

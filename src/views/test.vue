@@ -1,6 +1,15 @@
 <template>
-  <div style="width: 500px;margin: auto">
-    <wf-icon type="danger"></wf-icon>
+  <div style="width: 500px;margin: 200px auto">
+    <wf-alert title="title" description="description" effect="dark" type="info"></wf-alert>
+    <wf-alert title="title" description="description" effect="light" type="info"></wf-alert>
+    <wf-alert title="title" description="description" effect="dark" type="danger"></wf-alert>
+    <wf-alert title="title" description="description" effect="light" type="danger"></wf-alert>
+    <wf-alert title="title" description="description" effect="dark" type="warning"></wf-alert>
+    <wf-alert title="title" description="description" effect="light" type="warning"></wf-alert>
+    <wf-alert title="title" description="description" effect="dark" type="success"></wf-alert>
+    <wf-alert title="title" description="description" effect="light" type="success"></wf-alert>
+    <wf-alert title="title" description="description" effect="dark" type="primary"></wf-alert>
+    <wf-alert title="title" description="description" effect="light" type="primary"></wf-alert>
   </div>
 </template>
 

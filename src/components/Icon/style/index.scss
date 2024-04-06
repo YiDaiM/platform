@@ -13,8 +13,8 @@
   }
 }
 .icon-body {
-  font-size: var(--text-size);
-  color: var(--font-color)
+  font-size: var(--text-size) !important;
+  color: var(--font-color);
 }
 
 .icon--primary {
@@ -38,13 +38,13 @@
 }
 
 .icon--large {
-  --text-size: var(--large-text-size)
+  --text-size: var(--icon-ultra-large-size)
 }
 
 .icon--medium {
-  --text-size: var(--medium-text-size)
+  --text-size: var(--icon-medium-size)
 }
 
 .icon--small {
-  --text-size: var(--small-text-size)
+  --text-size: var(--icon-small-size)
 }
