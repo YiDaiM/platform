@@ -42,7 +42,8 @@ const headStyle = computed(() => {
   const { center } = props
   return {
     'fontSize': '22px',
-    textAlign: center
+    'textAlign': center,
+    'overflowWrap': 'anywhere'
   }
 })
 
@@ -50,7 +51,8 @@ const artStyle = computed(() => {
   const { center } = props
   return {
     'fontSize': '20px',
-    textAlign: center
+    'textAlign': center,
+    'overflowWrap': 'anywhere'
   }
 })
 </script>

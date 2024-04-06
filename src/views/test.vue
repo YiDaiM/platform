@@ -1,6 +1,6 @@
 <template>
   <div style="width: 500px;margin: 200px auto">
-    <wf-alert title="title" description="description" effect="dark" type="info"></wf-alert>
+    <wf-alert title="title" description="descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription" effect="dark" type="info"></wf-alert>
     <wf-alert title="title" description="description" effect="light" type="info"></wf-alert>
     <wf-alert title="title" description="description" effect="dark" type="danger"></wf-alert>
     <wf-alert title="title" description="description" effect="light" type="danger"></wf-alert>
