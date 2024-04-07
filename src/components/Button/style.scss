@@ -2,8 +2,8 @@
   --back-ground-color: var(--primary-color);
   --button-border-color: var(--primary-color);
   --text-color: var(--white-color);
-  --text-size: var(--medium-text-size)
-  --button-radius: var(--radius-base)
+  --text-size: var(--medium-text-size);
+  --button-radius: var(--wf-border-radius-base);
 }
 
 
@@ -28,12 +28,6 @@
   user-select: none;
 }
 
-@each $val in primary, success, warning, info, danger {
-  .button--$val {
-    --back-ground-color: var(--#{$val}-color);
-    --button-border-color: var(--#{$val}-color);
-  }
-}
 .button--primary {
   --back-ground-color: var(--primary-color);
   --button-border-color: var(--border-color);
