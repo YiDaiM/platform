@@ -7,7 +7,12 @@ import store from './store'
 import component from './components/index'
 import './style/app.scss'
 
+// 注册指令
+// import { ClickOutside } from './directive/outClose/index'
+
+
 createApp(App)
+// .directive('click-outside', ClickOutside)
 .use(store)
 .use(router)
 .use(component)
