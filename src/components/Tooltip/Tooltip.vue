@@ -24,7 +24,7 @@ export default defineComponent({
 })
 </script>
 <script setup lang="ts">
-import { ref, withDefaults, defineProps, reactive, defineEmits } from 'vue'
+import { ref, withDefaults, defineProps, reactive, defineEmits, defineExpose } from 'vue'
 import { tooltipProps, eventType } from './types'
 
 const emits = defineEmits(['change'])
@@ -39,15 +39,21 @@ const props = withDefaults(defineProps<tooltipProps>(), {
 
 // tooltip事件触发
 const toggle = () => {
-  console.log('isChange');
   
   exhibit.value = !exhibit.value
 }
+
+const emitChange = () => {
+  emits('change', exhibit.value)
+}
+
 const open = () => {
   exhibit.value = true
+  emitChange()
 }
 const close = () => {
   exhibit.value = false
+  emitChange()
 }
 let events = reactive<eventType>({
   'click': toggle,
@@ -72,9 +78,10 @@ const initEvent = () => {
 }
 initEvent()
 
-const contentRef = () => {
-  emits('change', exhibit.value)
-}
+defineExpose({
+  open,
+  close
+})
 
 </script>
 <style lang="scss" scoped>
