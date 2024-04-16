@@ -1,3 +1,41 @@
 .tooltip-wrapper {
+  --border-base: var(--wf-border);
+  --border-radius-base: var(--wf-border-radius-base);
+  --background-color-base: var(--wf-fill-color-blank);
+  --color-base: var(--wf-text-color-primary);
+}
+
+
+.tooltip-wrapper {
   display: inline-block;
+  .tooltip-content {
+    display: inline-block;
+    position: relative;
+    margin: 20px 0;
+    padding: 10px;
+    max-width: 300px;
+    color: var(--color-base);
+    background-color: var(--background-color-base);
+    border: var(--border-base);
+    border-radius: var(--border-radius-base);
+    &::after {
+      content: '';
+      position: absolute;
+      left: 40px;
+      top: -7px;
+      display: block;
+      width: 15px;
+      height: 15px;
+      transform: rotate(45deg);
+      border-left: var(--border-base);
+      border-top: var(--border-base);
+      border-radius: var(--border-radius-base);
+      background-color: var(--background-color-base);
+    }
+  }
+}
+.dark-theme {
+  --background-color-base: var(--wf-text-color-primary);
+  --color-base: var(--wf-fill-color);
+  --border-base: 0;
 }
