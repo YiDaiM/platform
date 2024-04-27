@@ -1,7 +1,7 @@
 <template>
-  <span v-on="events">
+  <span v-on="events" class="tool-tip-wrapper">
     <span><slot></slot></span>
-    <div v-if="exhibit">tooltip-content</div>
+    <div v-if="exhibit" class="tool-tip__content">tooltip-content</div>
   </span>
 </template>
 <script lang="ts">
@@ -11,7 +11,7 @@ export default defineComponent({
 })
 </script>
 <script setup lang="ts">
-import { ref, withDefaults, defineProps, reactive } from 'vue'
+import { ref, withDefaults, defineProps, reactive, onMounted } from 'vue'
 import { tooltipProps } from './types'
 
 const exhibit = ref(false) // tooltip展示变量
@@ -21,12 +21,14 @@ const toggle = () => {
   exhibit.value = !exhibit.value
 }
 const open = () => {
+  console.log(events);
+  
   exhibit.value = true
 }
 const close = () => {
   exhibit.value = false
 }
-const events = reactive({
+let events = reactive({
   'click': toggle,
   'mouseleave': close,
   'mouseenter': open
@@ -34,7 +36,13 @@ const events = reactive({
 
 
 const props = withDefaults(defineProps<tooltipProps>(), {
-  trigger: 'hover'
+  trigger: 'click'
+})
+
+onMounted(() => {
+  const { trigger } = props
+  events = trigger === 'hover' ? {'mouseleave': close, 'mouseenter': open} : {'click': toggle}
+  
 })
 
 </script>

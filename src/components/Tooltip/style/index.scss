@@ -1,0 +1,11 @@
+.tool-tip-wrapper {
+  --base-border-color: var(--wf-border-color-light);
+  --base-border-radius: var(--wf-border-radius-base);
+}
+
+.tool-tip-wrapper {
+  .tool-tip__content {
+    border: 1px solid var(--base-border-color);
+    border-radius: var(--base-border-radius);
+  }
+}
