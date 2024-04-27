@@ -1,6 +1,6 @@
 <template>
   <div style="width: 500px;margin: 200px auto">
-    <wf-tooltip>
+    <wf-tooltip @change="isChange" ref="tipRef">
       <wf-button type="success">回调成功</wf-button>
     </wf-tooltip>
   </div>
@@ -19,6 +19,12 @@ export default {
     }
   },
   methods: {
+    isChange(value) {
+      console.log(value, 'value');
+    }
+  },
+  mounted() {
+    this.$refs.tipRef.open()
   }
 }
 </script> 

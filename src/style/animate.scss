@@ -2,8 +2,9 @@
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.3s ease; /* 过渡透明度 */
 }
+
 .fade-enter, .fade-leave-to {
-  opacity: 0; /* 设置开始和结束时的透明度 */
+  opacity: 0;
 }
 
 
