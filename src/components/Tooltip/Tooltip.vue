@@ -34,13 +34,13 @@ const exhibit = ref(false) // tooltip展示变量
 const touchRef = ref<null | HTMLElement>(null)
 
 const props = withDefaults(defineProps<tooltipProps>(), {
-  trigger: 'click',
+  trigger: 'hover',
   effect: 'dark',
   rawContent: false
 })
 
 // tooltip事件触发
-const toggle = () => {
+let toggle = () => {
   exhibit.value = !exhibit.value
 }
 
@@ -65,6 +65,8 @@ const initEvent = () => {
   const { trigger } = props
   if (trigger === 'click') {
     events = reactive({})
+  } else {
+    toggle = () => { return null }
   }
 }
 initEvent()
