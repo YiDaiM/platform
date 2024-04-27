@@ -1,19 +1,21 @@
 <template>
-  <div class="tooltip-wrapper" :class="{'dark-theme': effect === 'dark'}" v-on="leaveEvent">
+  <div class="tooltip-wrapper" :class="{'dark-theme': effect === 'dark'}">
     <div
       ref="touchRef"
+      @click="toggle"
       v-on="events"
     >
       <slot></slot>
     </div>
     <transition name="fade" appear mode="in-out">
       <div
-      ref="contentRef"
-      v-if="exhibit"
-      class="tooltip-content"
-    >
-      <slot name="content">暂无内容</slot>
-    </div>
+        ref="contentRef"
+        v-if="exhibit"
+        class="tooltip-content"
+        v-on="events"
+      >
+        <slot name="content">暂无内容</slot>
+      </div>
     </transition>
   </div>
 </template>
@@ -32,14 +34,13 @@ const exhibit = ref(false) // tooltip展示变量
 const touchRef = ref<null | HTMLElement>(null)
 
 const props = withDefaults(defineProps<tooltipProps>(), {
-  trigger: 'hover',
+  trigger: 'click',
   effect: 'dark',
   rawContent: false
 })
 
 // tooltip事件触发
 const toggle = () => {
-  
   exhibit.value = !exhibit.value
 }
 
@@ -48,8 +49,6 @@ const emitChange = () => {
 }
 
 const open = () => {
-  console.log(events);
-  
   exhibit.value = true
   emitChange()
 }
@@ -58,28 +57,17 @@ const close = () => {
   emitChange()
 }
 let events = reactive<eventType>({
-  'click': toggle,
   'mouseleave': close,
   'mouseenter': open
-})
-let leaveEvent = reactive<eventType>({
-  mouseleave: close
 })
 
 const initEvent = () => {
   const { trigger } = props
-  events = reactive({})
-  leaveEvent = reactive({})
-
   if (trigger === 'click') {
-    events['click'] = toggle
-  } else {
-    events['mouseenter'] = open
-    leaveEvent['mouseleave'] = close
+    events = reactive({})
   }
 }
 initEvent()
-
 defineExpose({
   open,
   close

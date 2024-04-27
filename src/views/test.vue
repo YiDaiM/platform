@@ -22,9 +22,6 @@ export default {
     isChange(value) {
       console.log(value, 'value');
     }
-  },
-  mounted() {
-    this.$refs.tipRef.open()
   }
 }
 </script> 
