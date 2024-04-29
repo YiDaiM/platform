@@ -4,6 +4,7 @@
       ref="touchRef"
       @click="toggle"
       v-on="events"
+      class="tooltip-touch"
     >
       <slot></slot>
     </div>
@@ -35,7 +36,7 @@ const touchRef = ref<null | HTMLElement>(null)
 
 const props = withDefaults(defineProps<tooltipProps>(), {
   trigger: 'hover',
-  effect: 'dark',
+  effect: 'light',
   rawContent: false
 })
 

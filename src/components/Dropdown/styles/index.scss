@@ -1,0 +1,34 @@
+.drop-item-wrapper {
+  --hover-background: var(--wf-color-primary-light-9);
+  --hover-color: var(--primary-color);
+}
+
+
+.dropdown-wrapper {
+  height: 34px;
+  min-width: 200px;
+  .dropdown-touch {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+}
+
+
+.drop-item-wrapper {
+  padding: 5px 0;
+  .drop-item {
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    padding: 5px 3px;
+    cursor: pointer;
+    transition: background .2s;
+    &:hover {
+      background: var(--hover-background);
+      color: var(--hover-color);
+    }
+  }
+}

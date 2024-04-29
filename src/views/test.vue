@@ -1,8 +1,6 @@
 <template>
-  <div style="width: 500px;margin: 200px auto">
-    <wf-tooltip @change="isChange" ref="tipRef">
-      <wf-button type="success">回调成功</wf-button>
-    </wf-tooltip>
+  <div style="width: 100vw;height: 100vh;padding: 200px;">
+    <wf-dropdown></wf-dropdown>
   </div>
 </template>
 

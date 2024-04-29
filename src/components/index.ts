@@ -6,6 +6,8 @@ import CollapseItem from './Collapse/Collapse-item.vue'
 import icon from './Icon/icon.vue'
 import Alert from './Alert/Alert.vue'
 import Tooltip from './Tooltip/Tooltip.vue'
+import Dropdown from './Dropdown/Dropdown.vue'
+import DropdownItem from './Dropdown/DropdownItem.vue'
 
 import prefix from './prefix'
 const component = [
@@ -14,7 +16,9 @@ const component = [
   CollapseItem,
   icon,
   Alert,
-  Tooltip
+  Tooltip,
+  Dropdown,
+  DropdownItem
 ]
 
 // 批量注册全局组件
